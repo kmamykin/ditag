@@ -1,0 +1,19 @@
+<%= back_link %>
+<h2>Sample recorded on <%= local_time_label(@sample.recorded_at) -%> submitted by <%= user_label(@sample.user) %></h2>
+<h4>Images</h4>
+<% @sample.images.each do |i| %>
+	<%= image_tag i.public_filename %>
+<% end %>
+<h4>Audio</h4>
+<% @sample.audios.each do |a| %>
+	<%= embedded_player(a.public_filename) %> <br/>
+<% end %>
+<h4>Details</h4>
+<p>Glucose: <%= @sample.glucose_text %></p>
+<p>Activity: <%= @sample.activity %></p>
+<h4>Tags</h4>
+<%= render :partial => "shared/sample_tag_list", :locals => { :sample => @sample } %>
+<h4>Comments</h4>
+<%= render :partial => "shared/sample_comment", :locals => { :sample => @sample } %>
+<%= back_link %>
+

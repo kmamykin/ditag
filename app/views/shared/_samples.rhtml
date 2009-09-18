@@ -1,0 +1,49 @@
+<table id="tableSamples" summary="List of samples">
+	<colgroup>
+		<col width="80px"/>
+		<col width="90px" />
+		<col width="80px" />
+		<col width="160px" />
+		<col width="90px" />
+		<col width="160px" />
+		<col width="400px" />
+	</colgroup>
+	<thead>
+		<tr>
+			<td>By</td>
+			<td>Date/Time</td>
+			<td>Glucose</td>
+			<td>Media</td>
+			<td>Activity</td>
+			<td>Tags</td>
+			<td>Your Comments</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% samples.each do |sample| -%>
+			<tr class="<%= cycle("odd_line", "even_line") -%>" >
+				<td><%= link_to user_label(sample.user), {:controller=>'samples', :action=>'list', :id=>sample.user_id } %></td>
+				<td>
+					<%= link_to local_time_label(sample.recorded_at), { :controller => 'samples', :action => 'show', :id => sample.id} %>
+				</td>
+				<td><%= sample.glucose_text %></td>
+				<td>
+					<% sample.images.each do |i| %>
+						<%= link_to image_tag( i.public_filename, :size => "100x100"), { :controller => 'samples', :action => 'show', :id => sample.id} %>
+					<% end %>
+					<br/>
+					<% sample.audios.each do |a| %>
+						<%= embedded_player(a.public_filename) %> <br/>
+					<% end %>
+				</td>
+				<td><%= sample.activity %></td>
+				<td>
+					<%= render :partial => "shared/sample_tag_list", :locals => { :sample => sample } %>
+				</td>
+				<td>
+					<%= render :partial => "shared/sample_comment", :locals => { :sample => sample } %>
+				</td>
+			</tr>
+		<% end -%>
+	</tbody>	
+</table>

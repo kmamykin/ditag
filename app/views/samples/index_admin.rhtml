@@ -1,0 +1,32 @@
+<h3>Users and their latest activity</h3>
+<table id="user_list">
+	<thead>
+		<tr>
+			<td>Login</td>
+			<td>Name</td>
+			<td>Email</td>
+			<td>Handset #</td>
+			<td>Last handset seen</td>
+			<td>Samples</td>
+			<td>Last sample</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |u| -%>
+		<tr class="<%= cycle("odd_line", "even_line") -%>" >
+			<td><%= link_to u.login, {:action => 'list', :id => u.id } %></td>
+			<td><%= u.full_name %></td>
+			<td><%= u.email %></td>
+			<td><%= u.handset_number %></td>
+			<td><%= time_ago(u.last_log_time) %></td>
+			<td><%= u.samples.length %></td>
+			<td><%= u.samples.length>0 ? time_ago(u.samples.first.recorded_at) : 'N/A' %></td>
+		</tr>
+		<% end -%>
+	</tbody>
+</table>
+
+<h3>All Tags</h3>
+<%= render :partial => "shared/tag_cloud", :locals => { :tag_counts => @total_tag_counts} %>
+
+<%= link_to 'View all tags', {:controller=>'tags', :action=>'list'} %>

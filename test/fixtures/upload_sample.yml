@@ -1,0 +1,58 @@
+without_auth:
+  user_id: "10"
+  activity_type: "Other"
+  glucose: "123"
+without_user_id:
+  auth: "a457c19eef"
+  activity_type: "Other"
+  glucose: "123"
+wrong_auth:
+  auth: "wrong value"
+  user_id: "10"
+  activity_type: "Other"
+  glucose: "123"
+non_integer_user_id:
+  auth: "a457c19eef"
+  user_id: "non integer"
+  activity_type: "Other"
+  glucose: "123"
+non_existent_user_id:
+  auth: "a457c19eef"
+  user_id: "99999"
+  activity_type: "Other"
+  glucose: "123"
+minimal_good_request:
+  auth: "a457c19eef"
+  user_id: "10"
+  activity_type: "Other"
+  glucose: "123"
+  tags: "Good;Bad;Ugly"
+two_tags:
+  auth: "a457c19eef"
+  user_id: "10"
+  activity_type: "Other"
+  glucose: "123"
+  tags: "cats;dogs"
+upload_followup_1:
+  auth: "a457c19eef"
+  user_id: "10"
+  sample_id: 1
+  glucose: "123"
+  tags: "cats;dogs"
+meal:
+  auth: "a457c19eef"
+  user_id: "10"
+  glucose: "123"
+  tags: "Good;Bad;Ugly"
+  activity_type: "Meal"
+  meal_descriptor: "10;20;30"
+exercise:
+  auth: "a457c19eef"
+  user_id: "10"
+  glucose: "123"
+  tags: "Good;Bad;Ugly"
+  activity_type: "Exercise"
+  exercise_descriptor: "1;2"
+
+  
+  

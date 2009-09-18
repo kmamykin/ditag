@@ -1,0 +1,16 @@
+<%= back_link %>
+<h3>All tags</h3>
+<table>
+	<thead>
+		<tr><td>Tag</td></tr>
+	</thead>
+	<tbody>
+		<% @tag_counts.each do |tag| -%>
+			<tr class="<%= cycle("odd_line", "even_line") -%>">
+				<td><%= link_to tag.name, {:action=>'tagged', :tags=> tag.name } %>(<%=tag.count%>)</td>
+			</tr>
+		<% end -%>
+	</tbody>
+</table>
+<br />
+<%= back_link %>

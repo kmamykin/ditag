@@ -1,0 +1,20 @@
+SimpleObject
+============
+
+Extremely Simple Embed/Object tag helper. Although parameters can be overridden, basic defaults
+ are inferred from the provided 'source' parameter. As much as I like the SWFObject helper in 
+javascript, I use code like this for projects, where i just don't want to be lugging around
+yet another javascript file. Just a simple extension to ActionView is all I really want to be 
+using for media-rich sites!
+
+Usage:
+	<p><%= simple_object_tag "/example.mp3" %></p>
+	<p><%= simple_object_tag "/example.mov",:width=>640,:height=>480 %></p>
+	<p><%= simple_object_tag "/example.swf",:width=>100,:height=>200,:some_attribute=>"some_value" %></p>
+        
+Author:
+        Michael Cerna
+        cerna5150@yahoo.com
+        http://www.ahgsoftware.com
+        AHG Software
+        Antioch, Il USA

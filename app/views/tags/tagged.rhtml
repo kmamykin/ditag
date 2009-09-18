@@ -1,0 +1,23 @@
+<%= back_link %>
+<h3>Selected tags</h3>
+<% @remove_tag_links.each do |key,value| %>
+	<%=link_to key, {:action => 'tagged', :tags => key} %>(<%= link_to "del", { :action => 'tagged', :tags => value } %>)
+<% end %>
+
+<h3>Related tags</h3>
+<% @add_tag_links.each do |key,value| %>
+	<%=link_to key, {:action => 'tagged', :tags => key} %>(<%= link_to "add", { :action => 'tagged', :tags => value } %>)
+<% end %>
+
+<% if !@tag.nil? %>
+	<h3>Description</h3>
+	<div id ="tag_description"><%= text_to_html( @tag.has_description? ? @tag.description : "Please click here to add description...") %></div>
+	<%= in_place_editor( "tag_description", { :url => { :action=>'set_tag_description', :id=> @tag.name }, \
+			:load_text_url => { :action=>'get_tag_description', :id=> @tag.name }, :rows=>10}) %>
+	<%= link_to "View history", { :action => 'tag_history', :id => @tag.name }%>
+<% end %>
+
+<h3>Related records in your group (<%= @samples.length %>)</h3>
+<%= render :partial => "shared/samples", :locals => { :samples => @samples } %>	
+
+<%= back_link %>

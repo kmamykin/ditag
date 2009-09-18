@@ -1,0 +1,18 @@
+just_user_id:
+  user_id: 10
+just_auth:
+  auth: "some value"
+other_keys:
+  some_other_key: "some other value"
+wrong_auth_key:
+  auth: "some incorrect auth code"
+  user_id: 10
+not_integer_user_id:
+  auth: "a457c19eef"
+  user_id: "some not integer value"
+non_existent_user_id:
+  auth: "a457c19eef"
+  user_id: 999999
+good_request:
+  auth: "a457c19eef"
+  user_id: 10

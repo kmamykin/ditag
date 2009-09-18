@@ -1,0 +1,5 @@
+<div class="tag_cloud">
+	<% tag_cloud_calculate tag_counts do |tag, css_class| %>
+		<%= link_to tag.name, { :controller => 'tags', :action => 'tagged', :tags => tag.name}, :class => css_class %>
+	<% end %>
+</div>

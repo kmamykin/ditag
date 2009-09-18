@@ -1,0 +1,1 @@
+<%= @tags.collect { |tag| "#{tag.id},#{tag.name},#{tag.count}" }.join(";") unless @tags.nil? -%>

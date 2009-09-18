@@ -1,0 +1,24 @@
+<h1>Welcome to Di-Tag</h1>
+<p>Di-Tag is a website that allows individuals with diabetes share their experiences and learn from each other. 
+We are glad you are joining us. If you are new to the site, you may want to start with our Sandbox, to find out 
+more about the website, introduce yourself, and find out how others are using Di-Tag. From here, you can explore your records or browse the collection of tags. Enjoy.
+</p>
+
+<h2>My last records</h2>
+<%= link_to 'View all my samples', {:controller=>'samples', :action=>'list', :id => current_user.id} %>
+<%= link_to "Create sample", {:controller => 'samples', :action => 'new' } %>
+<%= render :partial => "shared/samples", :locals => { :samples => @samples } %>	
+
+<h1>Tags</h1>
+<p>Tags are keywords that you can use to describe activities and events you capture. 
+Tags can be used to easily find the particular activities you are interested in, or to compare similar activities. 
+Choose any of the tags below to see what records used this tag as a keyword. 
+</p>
+
+<h3>My Tags</h3>
+<%= render :partial => 'shared/tag_cloud', :locals => { :tag_counts => @tag_counts} %>
+
+<h3>All Tags</h3>
+<%= render :partial => "shared/tag_cloud", :locals => { :tag_counts => @total_tag_counts} %>
+
+<%= link_to 'View all tags', {:controller=>'tags', :action=>'list'} %>

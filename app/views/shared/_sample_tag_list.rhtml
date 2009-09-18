@@ -1,0 +1,6 @@
+<% if sample.user_id == current_user.id -%> 
+	<div id ="tags_for_sample<%= sample.id %>"><%= sample.tag_list.names.length == 0 ? "Click here to tag this sample" : sample.tag_list.to_s -%></div>
+	<%= in_place_editor( "tags_for_sample" + sample.id.to_s, {:url => {:controller=> 'samples', :action=>'set_sample_tag_list', :id=> sample.id }, :rows=>3}) %>
+<% else -%>
+	<div id ="tags_for_sample<%= sample.id %>"><%= sample.tag_list.to_s -%></div>
+<% end -%>

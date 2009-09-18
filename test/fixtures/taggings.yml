@@ -1,0 +1,40 @@
+one_good:
+  id: 1
+  tag_id: 1
+  taggable_id: 1
+  taggable_type: Sample
+  created_at: 2006-08-01
+  
+one_bad:
+  id: 2
+  tag_id: 2
+  taggable_id: 1
+  taggable_type: Sample
+  created_at: 2006-08-02
+  
+meal_good:
+  id: 3
+  tag_id: 1
+  taggable_id: 2
+  taggable_type: Sample
+  created_at: 2006-08-03
+  
+meal_bad:
+  id: 4
+  tag_id: 2
+  taggable_id: 2
+  taggable_type: Sample
+  created_at: 2006-08-04
+  
+meal_ugly:
+  id: 5
+  tag_id: 3
+  taggable_id: 2
+  taggable_type: Sample
+  created_at: 2006-08-05
+something_else:
+  id: 6
+  tag_id: 6
+  taggable_id: 5
+  taggable_type: Sample
+  created_at: 2006-08-05

@@ -1,0 +1,10 @@
+<pre><%= content_tag 'div', h(@sample.comment), :id=> 'comment', \
+		:onclick=> update_page{|page| page.form.reset :add_comment_form; page.show :add_comment_form; page[:value].focus } %></pre>
+<%= form_remote_tag \
+		:update => 'comment', \
+		:success => update_page{|page| page.hide :add_comment_form }, \
+		:url => {:controller=> 'samples', :action=>'set_sample_comment', :id=> @sample.id }, \
+		:html => {:id => 'add_comment_form', :style => "display: none;"} -%>
+	<%= text_area_tag 'value', '', :size => "25x10" %>
+    <div><%= submit_tag 'Add' %> <%= link_to_function 'Cancel', update_page{|page| page.hide :add_comment_form } %></div>
+<%= end_form_tag -%>

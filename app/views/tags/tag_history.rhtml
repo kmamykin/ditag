@@ -1,0 +1,21 @@
+<%= back_link %>
+<h2>Tag history for <%= @tag.name %></h2>
+<table id="tag_history">
+	<thead>
+		<tr>
+			<td>By</td>
+			<td>On</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+	<tbody>
+		<%- @tag.description_history.each do |th| -%>
+			<tr class="<%= cycle("odd_line", "even_line") -%>">
+				<td><%= user_label(th.user) %></td>
+				<td><%= local_time_label(th.created_at) %></td>
+				<td><%= text_to_html(th.description) %></td>
+			</tr>
+		<%- end -%>
+	</tbody>
+</table>
+<%= back_link %>

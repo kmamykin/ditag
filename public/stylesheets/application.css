@@ -1,0 +1,182 @@
+body { 
+	background-color: #fff; 
+	color: #333; 
+  	font-family: Verdana; 
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: normal;
+	color: #3c4242;
+	background-color: #b6bebe;
+	padding-left: 5px;
+}
+
+h2 {
+	font-size: 1.5em;
+	font-weight: normal;
+	color: #4b420a;
+	background-color: #f8eea1;
+	padding-left: 5px;
+}
+
+h3 {
+	font-size: 1.1em;
+	font-weight: normal;
+	color: #3c4242;
+	background-color: #e2e5e5;
+	padding-left: 5px;
+}
+
+h4 {
+	font-size: 1.1em;
+	font-weight: normal;
+	color: #4b420a;
+	background-color: #fefdc7;
+	padding-left: 5px;
+}
+
+
+#topBanner {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	right: 0;
+	height: 8em;
+	width: 97%;
+	border-bottom: 2px solid;
+	background-color: #6a7777;
+	color: #FFFFFF;
+	padding-left: 2em;
+}
+
+#applicationName {
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	font-size: 2.2em;
+}
+
+#topWelcome {
+	float: left;
+	font-size: 1.3em;
+	padding-left: 2px;
+}
+
+#topMenu {
+	float: right;
+}
+
+#topMenu a {
+	padding-right: 1em;
+	text-decoration: none;
+	color: white;
+}
+
+#content {
+	margin-top: 8em; /* margin needed for the topBaner*/
+}
+
+/************** common table definitions *****************/
+table {
+	/* table-layout: fixed;
+	border-collapse: separate;*/
+}
+
+table thead {
+	background-color: #fefdc7;
+	text-align: center;
+}
+col.columns {
+}
+col.comments {
+}
+
+tr.odd_line {
+	background-color: #fefff0;	
+}
+tr.even_line {
+	background-color: #fefdc7;	
+}
+
+
+/************ tag cloud definitions ***********/ 
+.tag_cloud {
+	background-color: white;
+}
+.tag_weight1 {
+	font-size: 1.0em;
+}
+.tag_weight2 {
+	font-size: 1.2em;
+}
+.tag_weight3 {
+	font-size: 1.4em;
+}
+.tag_weight4 {
+	font-size: 1.6em;
+}
+.tag_weight5 {
+	font-size: 1.8em;
+}
+.tag_weight6 {
+	font-size: 2.0em;
+}
+
+
+/************ definitions needed by the Rails helpers ****/
+body .fieldWithErrors {
+	padding: 2px;
+	background-color: red;
+	display: table;
+}
+
+#errorExplanation {
+	width: 400px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 12px;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	margin: -7px;
+	background-color: #c00;
+	color: #fff;
+}
+
+#errorExplanation p {
+	color: #333;
+	margin-bottom: 0;
+	padding: 5px;
+}
+
+#errorExplanation ul li {
+	font-size: 12px;
+	list-style: square;
+}
+
+div.uploadStatus {
+	margin: 5px;
+}
+
+div.progressBar {
+	margin: 5px;
+}
+
+div.progressBar div.border {
+	background-color: #fff;
+	border: 1px solid blue;
+	width: 100%;
+}
+
+div.progressBar div.background {
+	background-color: #333;
+	height: 18px;
+	width: 0%;
+}
+

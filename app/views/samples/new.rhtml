@@ -1,0 +1,15 @@
+<%= back_link %>
+<h1>New sample</h1>
+<%= error_messages_for 'sample' %>
+<% form_for :sample, :url => { :action => "create" }, :html => { :multipart => true } do |form| -%>
+	<p>Date/Time</p><%= datetime_select :sample, :recorded_at  %>
+	<p>Glucose:</p><%= form.text_field :glucose  %>
+	<p>Followup Glucose:</p><%= form.text_field :followup_glucose  %>
+	<p>Comment:</p><%= form.text_area :comment  %>
+	<p>Tags:</p><%= form.text_field :tag_list %>
+	<!--<p>Image: <%= file_field :image, :uploaded_data %></p>-->
+	<!--<p>Audio: <%= file_field :audio, :uploaded_data %></p>-->
+	<p><%= submit_tag 'Create' %></p>
+<% end -%>
+<%= back_link %>
+

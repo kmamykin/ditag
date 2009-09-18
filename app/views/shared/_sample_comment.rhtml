@@ -1,0 +1,13 @@
+<% if sample.user_id == current_user.id or current_user.admin? -%> 
+	<div id="coment_for_sample<%= sample.id %>"><%= (sample.comment.nil? or sample.comment == "") ? "Click here to add comment" : text_to_html(sample.comment) -%></div>
+	<%= in_place_editor( "coment_for_sample" + sample.id.to_s, \
+			{:url => {:controller=> 'samples', :action=>'set_sample_comment', :id=> sample.id }, \
+			:load_text_url => {:controller=> 'samples', :action=>'get_sample_comment', :id=> sample.id }, :rows=>10 }) -%>
+<% else -%>
+	<div id="coment_for_sample<%= sample.id %>"><%= (sample.comment.nil? or sample.comment == "") ? "" : text_to_html(sample.comment) -%></div>
+<% end -%>
+
+<!-- this code makes doubleclicking to expand the panel
+
+<pre ondblclick="with (this.style) { overflow = (overflow == 'auto' || overflow == '') ? 'visible' : 'auto' }" style="overflow: visible;">
+-->

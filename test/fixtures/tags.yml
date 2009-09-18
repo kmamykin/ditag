@@ -1,0 +1,23 @@
+good:
+  id: 1
+  name: Good
+  
+bad:
+  id: 2
+  name: Bad
+  
+ugly:
+  id: 3
+  name: Ugly
+  
+question:
+  id: 4
+  name: Question
+  
+animal:
+  id: 5
+  name: Crazy sugar
+  
+pretty:
+  id: 6
+  name: Pretty

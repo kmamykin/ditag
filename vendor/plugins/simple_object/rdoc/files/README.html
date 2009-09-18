@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>README
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Thu Jan 11 23:45:50 -0600 2007</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <p>
+SimpleObject
+</p>
+<h6>======</h6>
+<p>
+Extremely Simple Embed/Object tag helper. Although parameters can be
+overridden, basic defaults
+</p>
+<pre>
+ are inferred from the provided 'source' parameter. As much as I like the SWFObject helper in
+</pre>
+<p>
+javascript, I use code like this for projects, where i just don&#8216;t
+want to be lugging around yet another javascript file. Just a simple
+extension to ActionView is all I really want to be using for media-rich
+sites!
+</p>
+<p>
+Usage:
+</p>
+<pre>
+        &lt;p&gt;&lt;%= simple_object_tag &quot;/example.mp3&quot; %&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;%= simple_object_tag &quot;/example.mov&quot;,:width=&gt;640,:height=&gt;480 %&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;%= simple_object_tag &quot;/example.swf&quot;,:width=&gt;100,:height=&gt;200,:some_attribute=&gt;&quot;some_value&quot; %&gt;&lt;/p&gt;
+</pre>
+<p>
+Author:
+</p>
+<pre>
+        Michael Cerna
+        cerna5150@yahoo.com
+        http://www.ahgsoftware.com
+        AHG Software
+        Antioch, Il USA
+</pre>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

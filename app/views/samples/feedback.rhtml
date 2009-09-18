@@ -1,0 +1,12 @@
+<%= back_link %>
+<p>
+The development team of Di-Tag is looking forward to hearing from you! Please use the field below to 
+enter your comments, wishes and suggestions. 
+</p>
+<p>Type your comment or question here:</p> 
+<%= form_tag( { :action => "submit_feedback" }) %>
+	<p><%= text_area_tag "feedback_text", nil, :size => "80x10" %></p>
+	<p><%= submit_tag 'Send' %></p>
+<%= end_form_tag %>
+
+<%= back_link %>
